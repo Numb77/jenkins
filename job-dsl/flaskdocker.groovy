@@ -5,12 +5,6 @@ job('Flask Docker Build&Push') {
             node / gitConfigEmail('amitmiron77@gmail.com')
         }
     }
-    triggers {
-        scm('H/5 * * * *')
-    }
-    wrappers {
-        flask('flask')
-    }
     steps {
         dockerBuildAndPublish {
             repositoryName('numb77/job_1')

@@ -1,4 +1,4 @@
-job('Flask Docker Build&Push') {
+job('Flask Docker Build and Push') {
     scm {
         git('git://github.com/Numb77/elbit-test.git') {  node ->
             node / gitConfigName('Numb77')

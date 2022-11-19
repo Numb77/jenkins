@@ -6,7 +6,7 @@ job('Running Containers') {
 
 job('Flask Docker Build and Push') {
     scm {
-        git('git://github.com/Numb77/elbit-test.git') {  node ->
+        git('https://github.com/Numb77/elbit-test/tree/main/flaskapp') {  node ->
             node / gitConfigName('Numb77')
             node / gitConfigEmail('amitmiron77@gmail.com')
         }

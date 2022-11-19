@@ -1,13 +1,13 @@
-job('Flask Docker Build and Push') {
+job('Flask Docker Build and Push nginx') {
     scm {
-        git('git://github.com/Numb77/elbit-test.git') {  node ->
+        git('https://github.com/Numb77/elbit-test2') {  node ->
             node / gitConfigName('Numb77')
             node / gitConfigEmail('amitmiron77@gmail.com')
         }
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('numb77/job_1')
+            repositoryName('numb77/job_2')
             tag('${GIT_REVISION,length=9}')
             registryCredentials('Dockerhub')
             forcePull(false)

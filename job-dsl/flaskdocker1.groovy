@@ -1,12 +1,6 @@
-job('example-1') {
+job('Running Containers') {
     steps {
-        shell('echo Hello World!')
-    }
-}
-
-job('example-2') {
-    steps {
-        shell(readFileFromWorkspace('build.sh'))
+        shell('docker ps')
     }
 }
 
